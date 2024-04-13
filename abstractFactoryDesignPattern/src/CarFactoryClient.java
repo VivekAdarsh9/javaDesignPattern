@@ -1,4 +1,5 @@
 import factory.CarFactory;
+import factory.EuropeCarFactory;
 import factory.NorthAmericaCarFactory;
 import product.Car;
 import product.CarSpecification;
@@ -14,6 +15,13 @@ public class CarFactoryClient {
 
         northamericaCar.assemble();
         northAmericaSpecification.display();
+
+
+        CarFactory europeCarFactory=new EuropeCarFactory();
+        Car europeCar=europeCarFactory.createCar();
+        CarSpecification europeCarFactoryCarSpecification=europeCarFactory.createCarSpecification();
+        europeCar.assemble();
+        europeCarFactoryCarSpecification.display();
 
 
 
